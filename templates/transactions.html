@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Koruwel Finans - İşlemler</title>
+</head>
+<body>
+      <h1>Harcamalarınız</h1>
+      <table border="1">
+            <tr>
+                  <th>ID</th>
+                  <th>Tutar</th>
+                  <th>Kategori</th>
+                  <th>Tarih</th>
+            </tr>
+            {% for transaction in transactions %}
+            <tr>
+                  <td>{{ transaction.id }}</td>
+                  <td>{{ transaction.amount }}</td>
+                  <td>{{ transaction.category }}</td>
+                  <td>{{ transaction.date }}</td>
+            </tr>
+            {% endfor %}
+      </table>
+</body>
+</html>
